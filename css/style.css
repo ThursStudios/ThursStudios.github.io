@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+nav{
+    display: flex;
+    width: 1000px;
+    gap: 100px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    height: 100px;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+ul li{
+    cursor: pointer;
+    font-family: "Poppins";
+    transition: all 0.2s;
+}
+
+nav ul li:hover{
+    border-bottom: 1px solid black;
+}
+
+
+header{
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+nav img {
+    height: 130px;
+    border-radius: 100px;
+    width: 130px;
+    transition: transform 0.5s ease-out;
+}
+
+
+#slider{
+    margin:0 auto;
+    width:80%;
+    overflow:hidden;
+    margin-top: 90px; /* Adds 20px of space above each div */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .slides{
+    overflow:hidden;
+    animation-name:fade;
+    animation-duration:1s;
+    display:none;
+  }
+  
+  img{
+    width:100%;
+  }
+  
+  #dot{
+    margin:0 auto;
+    text-align:center;
+  }
+
+  .dot{
+    display:inline-block;
+    border-radius:50%;
+    background:#d3d3d3;
+    padding:8px;
+    margin:10px 5px;
+  }
+  
+  @media (max-width:567px){
+    #slider{
+      width:100%;
+  
+    }
+  }
+
+
+  @keyframes fade{
+    from{
+      opacity:0.9;
+    }
+    to{
+      opacity:1;
+    }
+  }
+
+  .slides img{
+    max-width: 1000px;
+    height: 300px;
+  }
+
+
+  .ImgBanner{
+    width: 1000px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 15px;
+    background-position: center;
+    position: relative; /* Ensures child elements position relative to this */
+    bottom: 0px;
+    
+  }
+
+  #ImgBanner1{
+    background-image: url(/assets/Images/banners/BannerDiscord.webp);
+  }
+  
+  #ImgBanner2{
+    background-image: url(/assets/Images/banners/TiktokBanner.webp)
+  }
+
+  .ImgBanner h1{
+    position: absolute; 
+    bottom: 20px; /* Pushes the text slightly from the bottom */
+    right: 2%; /* Centers horizontally */
+    color: white;
+    font-family: "Poppins", sans-serif;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .ImgBanner h1:hover{
+    background: rgba(0, 0, 0, 1); 
+  }
+
+.ImgBanner a h1:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width:1000px){
+  .ListaNav{
+    display: none;
+  }
+  nav img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+  }
+  nav{
+    justify-content: space-between;
+    margin:  0px 60px 60px 60px;
+}
+}
+
+@media (min-width:1000px){
+  nav img {
+    height: 130px;
+    border-radius: 130px;
+  }
+  nav{
+    text-align: center;
+    justify-content: center;
+  }
+  #hamburguer{
+    display: none;
+  }
+  
+}
+
+#hamburguer{
+  color: black;
+  font-size: 40px;
+  margin-top: 25px;
+  padding: 2px 40px 0px;
+  cursor: pointer;
+}
+
+#H1Games{
+  font-family: "Poppins";
+}
+
+.GamesDiv{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Games{
+  display: flex;
+  justify-content: center;
+}
+
+.GamesCard{
+  height: 250px;
+  width: 150px;
+  border-radius: 15px;
+  display: flex;
+  cursor: default;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.GamesCard h3{
+  display: flex;
+  bottom: 380px;
+  background-color: rgb(37, 37, 37, 0.3);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 5px 30px 5px;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.2s;
+}
+
+.GamesCard h3:hover{
+  background-color: rgb(37, 37, 37, 1);
+}
+
+#Game1 {
+  background-image: url(https://i-fotok.ru/images/strizhka-troynoy-kaskad/strizhka-troynoy-kaskad_58.jpeg);
+}
+
+#Game2 {
+  background-image: url(https://i-fotok.ru/images/strizhka-troynoy-kaskad/strizhka-troynoy-kaskad_58.jpeg);
+}
+
+footer {
+  background: linear-gradient(0deg, rgb(187, 187, 187) 0%, rgba(238,238,238,0) 100%);
+  display: flex;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  width: 100%;
+}
+
+footer h3 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 15px;
+  color: black;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  gap: 5px;
+}
+
+#Hugottr {
+  color: black;
+  transition: all 0.2s;
+}
+
+#Hugottr:hover {
+  color: white;
+}
+
+.LogotipoDev{
+  width: 115px;
+  margin-bottom: 10px;
+}
+
+.DevDiv {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  position: fixed; /* Mantém centralizado mesmo com rolagem */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+  width: 500px;
+  text-align: center;
+}
+
+.DevDiv h4 {
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.Negrito{
+  font-weight: 700;
+}
+
+.Sublinhado{
+  margin: 4px 4px 4px;
+  border-bottom: 1px solid black;
+  color: black;
+}
